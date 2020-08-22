@@ -1,0 +1,56 @@
+{
+    "name": "chinstrap/plugins-doctrine-source",
+    "type": "library",
+    "description": "Doctrine source plugin for Chinstrap CMS",
+    "keywords": [
+        "chinstrap",
+        "plugins-doctrine-source"
+    ],
+    "homepage": "https://github.com/chinstrap/plugins-doctrine-source",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Daly",
+            "email": "450801+matthewbdaly@users.noreply.github.com",
+            "homepage": "http://matthewdaly.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.2",
+        "doctrine/orm": "^2.7"
+    },
+    "require-dev": {
+        "chinstrap-cms/core": "dev-master",
+        "infection/infection": "^0.17.2",
+        "mockery/mockery": "^1.4",
+        "phpunit/phpunit": "^9.3",
+        "php-coveralls/php-coveralls": "^2.2",
+        "squizlabs/php_codesniffer": "^3.5",
+        "vimeo/psalm": "^3.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chinstrap\\Plugins\\DoctrineSource\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Chinstrap\\Plugins\\DoctrineSource\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests",
+        "psalm": "psalm"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
